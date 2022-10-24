@@ -11,6 +11,13 @@
 		36430E4429074E38009CF027 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36430E4329074E38009CF027 /* ContentView.swift */; };
 		36430E4629074E3D009CF027 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36430E4529074E3D009CF027 /* Assets.xcassets */; };
 		36430E4929074E3D009CF027 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36430E4829074E3D009CF027 /* Preview Assets.xcassets */; };
+		36430E5229074EA7009CF027 /* LargeItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36430E4F29074EA6009CF027 /* LargeItemView.swift */; };
+		36430E5329074EA7009CF027 /* CartItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36430E5029074EA6009CF027 /* CartItemView.swift */; };
+		36430E5429074EA7009CF027 /* CartSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36430E5129074EA6009CF027 /* CartSummary.swift */; };
+		36430E5929074EB6009CF027 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36430E5629074EB6009CF027 /* DataService.swift */; };
+		36430E5A29074EB6009CF027 /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36430E5729074EB6009CF027 /* CartViewModel.swift */; };
+		36430E5B29074EB6009CF027 /* AddedCartItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36430E5829074EB6009CF027 /* AddedCartItems.swift */; };
+		36430E5D29074EC7009CF027 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36430E5C29074EC7009CF027 /* Cart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +26,14 @@
 		36430E4329074E38009CF027 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		36430E4529074E3D009CF027 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36430E4829074E3D009CF027 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		36430E4F29074EA6009CF027 /* LargeItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LargeItemView.swift; sourceTree = "<group>"; };
+		36430E5029074EA6009CF027 /* CartItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartItemView.swift; sourceTree = "<group>"; };
+		36430E5129074EA6009CF027 /* CartSummary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartSummary.swift; sourceTree = "<group>"; };
+		36430E5629074EB6009CF027 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		36430E5729074EB6009CF027 /* CartViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
+		36430E5829074EB6009CF027 /* AddedCartItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddedCartItems.swift; sourceTree = "<group>"; };
+		36430E5C29074EC7009CF027 /* Cart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
+		36430E5E29074F0C009CF027 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +66,10 @@
 		36430E4029074E38009CF027 /* OdaCart */ = {
 			isa = PBXGroup;
 			children = (
+				36430E6229074FA8009CF027 /* Model */,
+				36430E6129074F93009CF027 /* ViewModel */,
+				36430E5F29074F62009CF027 /* View */,
+				36430E5E29074F0C009CF027 /* Info.plist */,
 				36430E4129074E38009CF027 /* OdaCartApp.swift */,
 				36430E4329074E38009CF027 /* ContentView.swift */,
 				36430E4529074E3D009CF027 /* Assets.xcassets */,
@@ -65,6 +84,42 @@
 				36430E4829074E3D009CF027 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		36430E5529074EB6009CF027 /* Repo */ = {
+			isa = PBXGroup;
+			children = (
+				36430E5629074EB6009CF027 /* DataService.swift */,
+			);
+			path = Repo;
+			sourceTree = "<group>";
+		};
+		36430E5F29074F62009CF027 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				36430E5029074EA6009CF027 /* CartItemView.swift */,
+				36430E5129074EA6009CF027 /* CartSummary.swift */,
+				36430E4F29074EA6009CF027 /* LargeItemView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		36430E6129074F93009CF027 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				36430E5529074EB6009CF027 /* Repo */,
+				36430E5829074EB6009CF027 /* AddedCartItems.swift */,
+				36430E5729074EB6009CF027 /* CartViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		36430E6229074FA8009CF027 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				36430E5C29074EC7009CF027 /* Cart.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +193,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				36430E4429074E38009CF027 /* ContentView.swift in Sources */,
+				36430E5D29074EC7009CF027 /* Cart.swift in Sources */,
+				36430E5429074EA7009CF027 /* CartSummary.swift in Sources */,
+				36430E5A29074EB6009CF027 /* CartViewModel.swift in Sources */,
+				36430E5329074EA7009CF027 /* CartItemView.swift in Sources */,
+				36430E5929074EB6009CF027 /* DataService.swift in Sources */,
+				36430E5B29074EB6009CF027 /* AddedCartItems.swift in Sources */,
+				36430E5229074EA7009CF027 /* LargeItemView.swift in Sources */,
 				36430E4229074E38009CF027 /* OdaCartApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,9 +332,9 @@
 				DEVELOPMENT_TEAM = 78T986F33T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OdaCart/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -299,9 +361,9 @@
 				DEVELOPMENT_TEAM = 78T986F33T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OdaCart/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
