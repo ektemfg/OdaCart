@@ -15,8 +15,11 @@ Hva fikk jeg til av det oppgaven spurte om?
 ✅ Minimal supported iOS version set to 15.0 ✅
 
 Only few things to fix to make it 14.0 + compatible 
+
 -> AsyncImage and 'data(for:delegate:) ARE NOT COMPATIBLE WITH IOS 14.
-if #available(iOS 15.0, *) returns false we must have a fallback
+
+if #available(iOS 15.0, *) returns false we must have a fallback function
+which uses compatible method.
 
 Error handling & loading state handling: 
 Stil TODO - Did not prioritize this because we save data on first fetch and load it from UserDefaults.
