@@ -11,7 +11,9 @@ Ellers fikk jeg en feilmelding om at prosjektet ikke finner OdaCard/info.plist v
 Hva fikk jeg til av det oppgaven spurte om?
 
 ✅ The application supports all screen resolutions and both landscape/portrait orientations ✅
+
 ✅ Minimal supported iOS version set to 15.0 ✅
+
 Only few things to fix to make it 14.0 + compatible 
 -> AsyncImage and 'data(for:delegate:) ARE NOT COMPATIBLE WITH IOS 14.
 if #available(iOS 15.0, *) returns false we must have a fallback
@@ -20,7 +22,8 @@ Error handling & loading state handling:
 Stil TODO - Did not prioritize this because we save data on first fetch and load it from UserDefaults.
 
 ✅ Clicking on Product Icon Shows Image Fullscreen ✅
-I choose to make own view with Large Product Image and Product data such as price, name, extra name...
+
+I did choose to make LargeItemView with Large Product Image and Product info such as Name, Extra Name and Price.
 
 ✅ The shopping cart panel visible only if there are items in cart. ✅
 
