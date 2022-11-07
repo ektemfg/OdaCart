@@ -1,10 +1,3 @@
-//
-//  OdaCartApp.swift
-//  OdaCart
-//
-//  Created by Dimitrije Pesic on 25/10/2022.
-//
-
 import SwiftUI
 
 @main

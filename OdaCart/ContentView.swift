@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  OdaCart
-//
-//  Created by Dimitrije Pesic on 17/10/2022.
-//
-
 import SwiftUI
 
 struct ContentView: View {
@@ -12,26 +5,28 @@ struct ContentView: View {
     @ObservedObject private var addedCartItems = AddedCartItems()
     @State var showPrices: Bool = true
     
-    
+    //TODO: Replace navbar title with Text view. It would be more clean and less code by simply using a Text View to present a title instead of toolbar item.
     
     
     init() {
         
-        // Her gjør ting med engang ContentView blir initialisert
-        // Legger en custom apperance til navbaren, slik at den ikke har en grå bakgrunn. Kunne egt brukt Text view som tittel, men ville gjøre det på denne måten. Det var mye pain men jeg var sta at jeg ville bruke navbar istedenfor. Fikk det til å funke bra, men kan bli litt rar av og til i darkmode.
-        // Egentlig er mye av det her for å ha darkmode til på se bra ut.
+        // This function is called when the ContentView is first initialized.
+        // Adds a custom appearance to the navbar so that it does not have a gray background.
+
+        // A lot of this is just for dark mode to look good.
+        
         let navBarAppearance = UINavigationBarAppearance()
         navBarAppearance.configureWithOpaqueBackground()
         UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
         UINavigationBar.appearance().standardAppearance = navBarAppearance
         UINavigationBar.appearance().standardAppearance.shadowColor = .clear
         
-        // Prøvde å gi custom apperance til TableView
+        // I gave TableView a custom appearance
         let tableViewApperance = UITableView.appearance()
         tableViewApperance.backgroundColor = UIColor(Color("backgroundColor"))
         tableViewApperance.contentInset.top = -35
         
-        // Prøvde å gi custom apperance til TableViewCells
+        // I gave TableViewCell a custom appearance
         let tableViewCellApperance = UITableViewCell.appearance()
         tableViewCellApperance.backgroundColor = UIColor(Color("backgroundColor"))
     }
@@ -40,7 +35,7 @@ struct ContentView: View {
         GeometryReader{ proxy in
             NavigationView {
                 VStack() {
-                    // Tror egt vi skulle gjort det mulig å fjerne ting fullstendig fra liste, men var ikke sikker det er meningen. Å gjøre det mulig å adde og fjerne ting ved å bruke tilgjengelige produkter mener jeg er mye bedre. Det hadde vært dumt å ha liste av produkter også  la oss si legge til 2, og når vi fjerner disse 2 fra handlekurven fjerne selve produkt CellViewen fra lista. For meg gir det ikke mening. Derfor valgte jeg å ha det slik som her.
+                    // I choose not to remove the CellView of an item from the list if no items of its type are in the cart, instead just collapse buttons into one.
                     if let cartItems = cartViewModel.cart?.items {
                         HStack {
                             List(cartItems) { that in
@@ -57,7 +52,7 @@ struct ContentView: View {
                     
                     
                     
-                    // har vi noe i handlekuven fra før? vi sjekker isSummaryVisible variabelen fra addedCartItems
+                    // We will check if there are any items in the cart by checking the bool value of isSummaryVisible.
                     if addedCartItems.isSummaryVisible {
                         HStack{
                             CartSummary(addedCartItems: addedCartItems)

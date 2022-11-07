@@ -1,10 +1,3 @@
-//
-//  LargeImageView.swift
-//  OdaCart
-//
-//  Created by Dimitrije Pesic on 21/10/2022.
-//
-
 import Foundation
 import SwiftUI
 

@@ -1,14 +1,7 @@
-//
-//  CartSummary.swift
-//  OdaCart
-//
-//  Created by Dimitrije Pesic on 20/10/2022.
-//
-
 import Foundation
 import SwiftUI
 
-// CartSummary er en view vi kaller når vi har produkter i cartItems lista. Den viser hvor mange produkter det er i lista, og i tillegg samlet pris. Henter sine verdier fra addedCartItems.
+// The Cart Summary is a view we call when we have products in the cartItems list. It shows how many products there are in the list, and in addition the total price. Values are fetched from addedCartItems.
 
 
 struct CartSummary: View {

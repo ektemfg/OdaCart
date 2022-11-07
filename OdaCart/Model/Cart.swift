@@ -1,10 +1,3 @@
-//
-//  CartItem.swift
-//  OdaCart
-//
-//  Created by Dimitrije Pesic on 17/10/2022.
-//
-
 import Foundation
 
 struct Cart: Codable {

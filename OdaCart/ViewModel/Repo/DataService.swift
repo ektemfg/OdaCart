@@ -1,21 +1,7 @@
-//
-//  DataService.swift
-//  OdaCart
-//
-//  Created by Dimitrije Pesic on 17/10/2022.
-//
-/*
- Api lenke:
-https://api.npoint.io/d4e0a014b1cfc5254bcb
- Mocken:
- https://www.figma.com/file/eoU8ArjtQ7sIxtwLHXbIpG/iOS-Temaoppgave-7?node-id=0%3A1
-*/
-
-/*
- Vi henter ting fra API lenken , decoder det om til vår Cart klasse og retunerer det. Vi kaller på DataService fra ViewModellen.
- */
-
 import Foundation
+/*
+ We fetch data from the API,  decode it as our Cart class and return it. We call DataService from the ViewModel.
+ */
 struct DataService {
     private static let  baseUrl = "https://api.npoint.io/"
     private static let  endPoint = "d4e0a014b1cfc5254bcb"
