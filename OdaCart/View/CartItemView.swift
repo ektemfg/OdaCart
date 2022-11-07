@@ -23,14 +23,14 @@ struct CartItemView : View {
                         .scaledToFill()
                         .onTapGesture {
                             isSelected.toggle()
-                                
+                            
                         }
-                        
-                        
+                    
+                    
                         .padding()
                     NavigationLink(destination: LargeItemView(item: item), isActive: $isSelected){}.opacity(0)
                         .frame(width: 0, height: 0)
-            }
+                }
             }
             
         placeholder: {
@@ -40,7 +40,7 @@ struct CartItemView : View {
         }
         .frame(width: 70, height: 70, alignment: .trailing)
             
-        //TODO: Create overlay that states SALE in top leading corner of the image.
+            //TODO: Create overlay that states SALE in top leading corner of the image.
             
             VStack(alignment:.leading) {
                 Text(item.product.name)
@@ -89,7 +89,7 @@ struct CartItemView : View {
                         }
                         .padding(.leading, 20)
                 }
-            }else {
+            } else {
                 //Otherwise, we will show the minus and plus signs and the count of that product in the cart (addedCartItems)
                 HStack(alignment:.center){
                     Spacer()
@@ -112,18 +112,11 @@ struct CartItemView : View {
                     
                 }
                 
-                
             }
             
         } .alert(isPresented: $soldOutAlertShowing, content: {
             Alert(title: Text("Unnskyld"), message: Text("Produktet er utsolgt"), dismissButton: .default(Text("OK")))
-        })
-        
-        
-        
-        
-        
-        
+        }
+        )
     }
-    
 }

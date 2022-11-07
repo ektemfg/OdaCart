@@ -18,12 +18,12 @@ class AddedCartItems: ObservableObject {
             
             
             itemCount = cartItems.count
-            totalPrice = defaults.double(forKey: "lastTotal") ?? 0.0
+            totalPrice = defaults.double(forKey: "lastTotal")
             
             // Make the summary visible if cartItems is not empty. These are values that are observed in CartSummary from AddedCartItems
             
             isSummaryVisible = !cartItems.isEmpty
-    }
+        }
     }
     
     // Function to check if cartItems contains a specific item.
@@ -63,7 +63,7 @@ class AddedCartItems: ObservableObject {
         return cartItems.filter { $0.product.id == item.product.id }.count
         
     }
-
+    
     
     // Saves totalPrice with lastTotal key and cartItems to to UserDefaults as a encoded object to be able to retrieve it at app restart.
     func save() {
@@ -74,4 +74,4 @@ class AddedCartItems: ObservableObject {
             defaults.set(totalPrice, forKey: "lastTotal")
         }
     }
- }
+}

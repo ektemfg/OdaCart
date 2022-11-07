@@ -5,32 +5,31 @@ struct LargeItemView: View {
     let item: Item
     
     var body: some View {
-        
         HStack{
-                VStack {
+            VStack {
                 Text(item.product.name)
-                        .font(.system(size:20, weight: .medium, design:.rounded))
-                        .lineLimit(1)
+                    .font(.system(size:20, weight: .medium, design:.rounded))
+                    .lineLimit(1)
                 Text(item.product.nameExtra ?? "")
-                        .font(.system(size:20, weight: .medium, design:.rounded))
-                        .lineLimit(1)
-                    Spacer()
+                    .font(.system(size:20, weight: .medium, design:.rounded))
+                    .lineLimit(1)
+                Spacer()
                 AsyncImage(url: URL(string: item.product.images[0].thumbnail.url)) { image in
-                image
-                    .resizable()
-                    .scaledToFit()
-                    .onTapGesture {
-                        
-                    }
+                    image
+                        .resizable()
+                        .scaledToFit()
+                        .onTapGesture {
+                            
+                        }
+                }
+            placeholder: {
+                ProgressView()
             }
-        placeholder: {
-            ProgressView()
+                Text("Pris: " + "kr " + (item.product.grossPrice ?? ""))
+                    .font(.system(size:20, weight: .heavy, design:.rounded))
+                    .lineLimit(1)
             }
-                    Text("Pris: " + "kr " + (item.product.grossPrice ?? ""))
-                        .font(.system(size:20, weight: .heavy, design:.rounded))
-                        .lineLimit(1)
-            }
-            }
-        
         }
+        
     }
+}

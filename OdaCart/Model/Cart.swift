@@ -53,9 +53,9 @@ struct Availability: Codable {
 }
 
 enum Description: String, Codable {
-case empty = ""
-case utsolgtFraLeverandør = "Utsolgt fra leverandør"
-case utsolgt = "Utsolgt"
+    case empty = ""
+    case soldOutSupplier = "Utsolgt fra leverandør"
+    case soldOut = "Utsolgt"
 }
 
 enum Code: String, Codable {
@@ -113,28 +113,28 @@ struct ClientClassifier: Codable {
         case isImportant = "is_important"
     }
 }
+
+struct Imge: Codable {
+    let large, thumbnail: Large
     
-    struct Imge: Codable {
-        let large, thumbnail: Large
-        
-    }
+}
+
+struct Large: Codable {
+    let url: String
+}
+
+struct Discount: Codable {
+    let isDiscounted: Bool?
+    let descriptionShort,displayPriceTotal,discountedDisplayPriceTotal,undiscountedGrossPrice : String?
     
-    struct Large: Codable {
-        let url: String
+    enum CodingKeys: String, CodingKey{
+        case isDiscounted
+        case descriptionShort = "description_short"
+        case displayPriceTotal = "display_price_total"
+        case discountedDisplayPriceTotal = "discounted_display_price_total"
+        case undiscountedGrossPrice = "undiscounted_gross_price"
     }
-    
-    struct Discount: Codable {
-        let isDiscounted: Bool?
-        let descriptionShort,displayPriceTotal,discountedDisplayPriceTotal,undiscountedGrossPrice : String?
-        
-        enum CodingKeys: String, CodingKey{
-            case isDiscounted
-            case descriptionShort = "description_short"
-            case displayPriceTotal = "display_price_total"
-            case discountedDisplayPriceTotal = "discounted_display_price_total"
-            case undiscountedGrossPrice = "undiscounted_gross_price"
-        }
-    }
+}
 
 struct Promotion: Codable {
     let title,textColor,titleColor,backgroundColor: String

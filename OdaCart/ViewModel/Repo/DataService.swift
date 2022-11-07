@@ -13,8 +13,8 @@ struct DataService {
         let (data,_) = try await URLSession.shared.data(for: request)
         let cartData = try JSONDecoder().decode(Cart.self, from: data)
         return cartData
-}
- 
+    }
+    
     func fetchCart() async throws -> Cart {
         return try await performRequest(finalUrl)
     }

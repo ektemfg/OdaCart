@@ -12,7 +12,7 @@ struct ContentView: View {
         
         // This function is called when the ContentView is first initialized.
         // Adds a custom appearance to the navbar so that it does not have a gray background.
-
+        
         // A lot of this is just for dark mode to look good.
         
         let navBarAppearance = UINavigationBarAppearance()

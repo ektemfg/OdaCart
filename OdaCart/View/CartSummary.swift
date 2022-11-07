@@ -12,7 +12,7 @@ struct CartSummary: View {
             Image(systemName: "cart")
             Text(String(addedCartItems.cartItems.count) + " products")
                 .foregroundColor(Color("textColor"))
-                
+            
             Spacer()
             Text("kr " + String(format:"%.2f", addedCartItems.totalPrice).replacingOccurrences(of: ".", with: ","))
                 .foregroundColor(Color("textColor"))

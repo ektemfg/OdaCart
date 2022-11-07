@@ -1,6 +1,8 @@
 import Foundation
 import SwiftUI
 
+// TODO: Replace Force Unwraps with a better solution. Perhaps do cart update in init, so It wont be optional.
+@MainActor
 class CartViewModel: ObservableObject {
     @Published var cart : Cart? = nil
     @Published var isSummaryVisible: Bool = false
@@ -10,14 +12,12 @@ class CartViewModel: ObservableObject {
     init()  {
         Task {
             do{
-                await updateCart()
-
+                updateCart()
             }
         }
         
     }
     
-    @MainActor
     func updateCart() {
         Task {
             do{
@@ -33,10 +33,10 @@ class CartViewModel: ObservableObject {
     }
     
     // Checks if priceTotal is not same as discountedPrice  therefore checks if item is on sale.
-     func checkDiscount(item: Item) -> Bool {
+    func checkDiscount(item: Item) -> Bool {
         return item.displayPriceTotal != item.discountedDisplayPriceTotal
     }
-        
+    
 }
 
 // TODO: Fix Preview.
